@@ -7,18 +7,18 @@ def matrix_divided(matrix, div):
 
     if type(matrix) not in [list]:
         raise TypeError("matrix must be a matrix (list of lists \
-                        of integers/floats")
+of integers/floats")
 
     for row in matrix:
         if type(row) not in [list]:
             raise TypeError("matrix must be a matrix (list of lists) \
-                            of integers/floats")
+of integers/floats")
 
     for row in matrix:
         for element in row:
             if type(element) not in [int, float]:
                 raise TypeError("matrix must be a matrix (list of lists) \
-                                of integers/floats")
+of integers/floats")
 
     size = len(matrix[0])
     for row in matrix:
