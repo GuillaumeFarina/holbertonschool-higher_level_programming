@@ -53,7 +53,12 @@ Traceback (most recent call last):
   ...
 TypeError: print_square() takes 1 positional argument but 2 were given
 
-print_square('pokemon')
+>>> print_square('pokemon')
 Traceback (most recent call last):
     ...
 TypeError: '<' not supported between instances of 'str' and 'int'
+
+>>> print_square('moi')
+Traceback (most recent call last):
+  ...
+TypeError: size must be an integer
