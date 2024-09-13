@@ -14,7 +14,7 @@ def print_square(size):
     Loop to print a line of '#' of length 'size', 'size' times
     """
 
-    if type(size) is not [int] is float and size < 0:
+    if type(size) is not [int] is float:
         raise TypeError("size must be an integer")
     if size < 0:
         raise ValueError("size must be >= 0")
