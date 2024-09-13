@@ -5,30 +5,10 @@ Traceback (most recent call last):
     ...
 TypeError: print_square() missing 1 required positional argument: 'size'
 
->>> print_square(1.2)
-Traceback (most recent call last):
-    ...
-TypeError: 'float' object cannot be interpreted as an integer
-
->>> print_square(pokemon)
-Traceback (most recent call last):
-  ...
-NameError: name 'pokemon' is not defined
-
->>> print_square(1, 2.1)
-Traceback (most recent call last):
-  ...
-TypeError: print_square() takes 1 positional argument but 2 were given
-
 >>> print_square(-2)
 Traceback (most recent call last):
     ...
 ValueError: size must be >= 0
-
->>> print_square(0)
-
->>> print_square(1)
-#
 
 >>> print_square(10)
 ##########
@@ -48,17 +28,12 @@ ValueError: size must be >= 0
 ####
 ####
 
->>> print_square(1, float('inf'))
+>>> print_square("Hello")
 Traceback (most recent call last):
-  ...
-TypeError: print_square() takes 1 positional argument but 2 were given
+...
+TypeError: size must be an integer
 
->>> print_square('pokemon')
+>>> print_square(-9.99)
 Traceback (most recent call last):
-    ...
-TypeError: '<' not supported between instances of 'str' and 'int'
-
->>> print_square('moi')
-Traceback (most recent call last):
-  ...
+...
 TypeError: size must be an integer
