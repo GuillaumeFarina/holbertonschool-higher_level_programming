@@ -1,9 +1,16 @@
 #!/usr/bin/python3
+"""
+ prints a text with 2 new lines after each of specific char.
+"""
+
 
 def text_indentation(text):
+    """
+    prints a test
+    """
+
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    
     text = text.strip()
     if text:
         for char in ".?:":
