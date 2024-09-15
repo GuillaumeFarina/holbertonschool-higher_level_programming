@@ -4,3 +4,20 @@
 Traceback (most recent call last):
     ...
 TypeError: text must be a string
+
+>>> text_indentation('hello. hello? hello:')
+hello.
+
+hello?
+
+hello:
+
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text_indentation(pokemon)
+Traceback (most recent call last):
+...
+NameError: name 'pokemon' is not defined
