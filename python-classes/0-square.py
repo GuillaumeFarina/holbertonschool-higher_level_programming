@@ -8,5 +8,4 @@ class Square:
     """
     This is a class named Square
     """
-    def __init__(self):
-        print("square", self)
+    pass
