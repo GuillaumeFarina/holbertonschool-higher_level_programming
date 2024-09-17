@@ -15,7 +15,7 @@ class Rectangle:
         Getter method for the width attribute.
         Returns the width of the rectangle.
         """
-        self.__width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -38,7 +38,7 @@ class Rectangle:
         Getter method for the height attribute.
         Returns the height of the rectangle.
         """
-        self.__height
+        return self.__height
 
     @height.setter
     def height(self, value):
