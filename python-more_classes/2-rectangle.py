@@ -8,6 +8,15 @@ class Rectangle:
     """
     This is a class named Rectangle
     """
+    def __init__(self, width=0, height=0):
+        """
+        Initializes a new instance of the Rectangle class.
+        Args:
+            width (int): The width of the rectangle. Defaults to 0.
+            height (int): The height of the rectangle. Defaults to 0.
+        """
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
@@ -55,23 +64,13 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    def __init__(self, width=0, height=0):
-        """
-        Initializes a new instance of the Rectangle class.
-        Args:
-            width (int): The width of the rectangle. Defaults to 0.
-            height (int): The height of the rectangle. Defaults to 0.
-        """
-        self.height = height
-        self.width = width
-
     def area(self):
         """
         Calculates and returns the area of the rectangle.
         Returns:
             int: The area of the rectangle.
         """
-        return self.width * self.height
+        return self.__width * self.__height
 
     def perimeter(self):
         """
@@ -80,6 +79,6 @@ class Rectangle:
         Returns:
             int: The perimeter of the rectangle.
         """
-        if self.width or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
-        return (self.height + self.width ) * 2
+        return (self.__height + self.__width) * 2
