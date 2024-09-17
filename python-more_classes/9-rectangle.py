@@ -21,7 +21,6 @@ class Rectangle:
         self.height = height
         self.width = width
         Rectangle.number_of_instances += 1
-        self.instance_attribute = (width == height)
 
     @property
     def width(self):
@@ -111,12 +110,22 @@ class Rectangle:
         """
         Destructor method to manage deletion of instances.
         """
-        if Rectangle.number_of_instances > 0:
-            print("Bye rectangle...")
-            Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
+        """
+        Compares two rectangles and returns
+        the one with the greater or equal area.
+
+        Args:
+            rect_1 (Rectangle): The first rectangle.
+            rect_2 (Rectangle): The second rectangle.
+
+        Returns:
+            Rectangle: The rectangle with the greater or equal area.
+        """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
