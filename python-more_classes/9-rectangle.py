@@ -10,7 +10,6 @@ class Rectangle:
     """
     number_of_instances = 0
     print_symbol = "#"
-    square = 0
 
     def __init__(self, width=0, height=0):
         """
@@ -109,8 +108,12 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1
+        """
+        Destructor method to manage deletion of instances.
+        """
+        if Rectangle.number_of_instances > 0:
+            print("Bye rectangle...")
+            Rectangle.number_of_instances -= 1
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
@@ -120,6 +123,7 @@ class Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() >= rect_2.area():
             return rect_1
+        return rect_2
 
     @classmethod
     def square(cls, size=0):
