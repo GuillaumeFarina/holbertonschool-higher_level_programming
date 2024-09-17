@@ -84,6 +84,9 @@ class Rectangle:
         return (self.__height + self.__width) * 2
 
     def __str__(self):
+        """
+        Print lines of '#' with the specified width and return the last line
+        """
         if self.width == 0 or self.height == 0:
             print("")
         else:
