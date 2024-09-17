@@ -88,7 +88,7 @@ class Rectangle:
         Print lines of '#' with the specified width and return the last line
         """
         if self.width == 0 or self.height == 0:
-            print("")
+            return ""
         else:
             for index in range(self.height-1):
                 print(str('#') * self.width)
