@@ -87,6 +87,6 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             print("")
         else:
-            for index in range(self.height -1):
-                print (str ('#') * self.width)
-        return (str ('#') * self.width)
+            for index in range(self.height-1):
+                print(str('#') * self.width)
+        return (str('#') * self.width)
