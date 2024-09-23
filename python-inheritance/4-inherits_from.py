@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+This line specifies the interpreter to be used for executing the script
+"""
+
 
 def inherits_from(obj, a_class):
     """
