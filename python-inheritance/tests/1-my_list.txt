@@ -13,6 +13,10 @@
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
 
+>>> MyList.append("a")
+Traceback (most recent call last):
+TypeError: descriptor 'append' for 'list' objects doesn't apply to a 'str' object
+
 >>> my_list.append(-5)
 >>> print(my_list)
 [1, 4, 2, 3, 5, -5]
