@@ -12,7 +12,8 @@ class BaseGeometry():
         """
         Raise Exception
         """
-        raise Exception("area() is not implemented")
+        if not isinstance(self, float):
+            raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """
@@ -29,6 +30,7 @@ class Rectangle(BaseGeometry):
     A class used to represent a Rectangle, inheriting from BaseGeometry.
     """
     def __init__(self, width, height):
+        """initialize width and height"""
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
